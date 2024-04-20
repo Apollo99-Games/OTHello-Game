@@ -25,6 +25,34 @@ The numbers represent the points you will get by making a move on that coordinat
 # Using this to build a Custom Interface
 Although this project is built to interact with a terminal, it can easily be modified to work with other user interfaces, such as a GUI. 
 
+# Board Class
+Contains an 8 by 8 board for the game. It also keeps track of the number of pieces each player has on it.
+```java
+
+private static Board board = new Board();
+
+// get a piece on the board
+Piece piece = board.getPiece(new Point('A', 0));
+
+// set a piece on the board
+board.setPiece(piece, new Point('A', 0));
+
+// Get the number of player pieces
+int black = board.getNumberOfBlackPieces();
+int white = board.getNumberOfWhitePieces();
+
+ArrayList<Point> piecesToFlip = new ArrayList<Point>();
+piecesToFlip.add(new Point('A', 0));
+piecesToFlip.add(new Point('A', 1));
+piecesToFlip.add(new Point('A', 2));
+piecesToFlip.add(new Point('A', 3));
+
+// changes all pieces on the specified points to their opposite colour
+// For example, if all the pieces in the specified points are white, they will become black
+board.flipAllPieces(piecesToFlip);
+
+```
+
 # Vaild Moves Class
 It is an easy-to-use class that gives you every valid move for a player. All it requires is passing in the current state of the board and the player's pieces' colour.
 ```java
