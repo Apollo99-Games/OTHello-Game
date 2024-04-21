@@ -111,7 +111,7 @@ HashMap<Point, ArrayList<Point>> blackMoves = checker.getValidPlayerMoves(Tile.B
 ```
 
 # AI Class
-A easy to use computer player that will play against human players.
+An easy-to-use computer player that will play against human players.
 
 ```java
 
