@@ -66,7 +66,7 @@ checker.updateBoard(board);
 // Returns a hashmap
 // The key is the coordinate on which the player can play a valid move
 //The value contains a list of all the coordinates on which the pieces will be flipped to the current player's colour
-// The size of each value's list also represents the number of points the player will get if choose to move on the coordinate of that value's key
+// The size of each value's list also represents the number of points the player will get if they choose to move on the coordinate of that value's key
 HashMap<Point, ArrayList<Point>> blackMoves = checker.GetValidPlayerMoves(Tile.BLACK);
 
 ```
