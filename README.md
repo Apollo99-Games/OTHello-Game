@@ -25,6 +25,45 @@ The numbers represent the points you will get by making a move on that coordinat
 # Using this to build a Custom Interface
 Although this project is built to interact with a terminal, it can easily be modified to work with other user interfaces, such as a GUI. 
 
+# Basic Helper Classes
+There are two small helper classes in this project.
+
+## Point Class
+A basic class that holds a 2D coordinate (x, y)
+```java
+
+// The point can be created with either two numbers or a letter as the x-axis
+Point one = new Point(5, 6);
+Point two = new Point('A', 5);
+
+//Convert a string to a point in a format that has a letter for the x-axis and then a number for the y-axis
+Point three = Point.valueOf("A5")
+
+// simple getters and setters
+three.setX(3);
+three.setY(3);
+int x  = three.getX();
+int y = three.getY();
+
+```
+
+## Piece Class
+A basic class that holds the colour of a piece on the board (BLACK, WHITE, EMPTY)
+```java
+
+// empty piece
+Piece emptyPiece = new Piece();
+
+// piece with a custom colour (BLACK, WHITE, EMPTY)
+Piece whitePiece = new Piece(Tile.WHITE);
+Piece blackPiece = new Piece(Tile.BLACK);
+
+// some other helpful methods
+whitePiece.isOppositeTo(blackPiece) // true
+Piece whitePiece2 = blackPiece.getOpposite();
+
+```
+
 # Board Class
 Contains an 8 by 8 board for the game. It also keeps track of the number of pieces each player has on it.
 ```java
@@ -68,6 +107,18 @@ checker.updateBoard(board);
 //The value contains a list of all the coordinates on which the pieces will be flipped to the current player's colour
 // The size of each value's list also represents the number of points the player will get if they choose to move on the coordinate of that value's key
 HashMap<Point, ArrayList<Point>> blackMoves = checker.getValidPlayerMoves(Tile.BLACK);
+
+```
+
+# AI Class
+A easy to use computer player that will play against human players.
+
+```java
+
+// Create the valid moves class
+
+// Pass in the current state of the board and the valid moves the AI can make to get the AI's move.
+Point AIMove = AI.makeMove(board, vaildAIMoves);
 
 ```
 
