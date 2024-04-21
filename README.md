@@ -37,7 +37,7 @@ Point one = new Point(5, 6);
 Point two = new Point('A', 5);
 
 //Convert a string to a point in a format that has a letter for the x-axis and then a number for the y-axis
-Point three = Point.valueOf("A5")
+Point three = Point.valueOf("A5");
 
 // simple getters and setters
 three.setX(3);
@@ -59,7 +59,7 @@ Piece whitePiece = new Piece(Tile.WHITE);
 Piece blackPiece = new Piece(Tile.BLACK);
 
 // some other helpful methods
-whitePiece.isOppositeTo(blackPiece) // true
+whitePiece.isOppositeTo(blackPiece); // true
 Piece whitePiece2 = blackPiece.getOpposite();
 
 ```
