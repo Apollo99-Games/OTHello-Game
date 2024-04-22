@@ -2,6 +2,8 @@
 
 This is an implementation of Othello in Java. Note that you will need some JDK and preferably an IDE to run the code, as a terminal is required to print the result (I used VS code). The game can be run from the "OTHelloGame.java" file.
 
+You can run the game on [Replit](https://replit.com/@WahhajKhan/OTHello-Game?v=1).
+
 The Java Version used to test the code:
 
 openjdk version "17.0.11" 2024-04-16
